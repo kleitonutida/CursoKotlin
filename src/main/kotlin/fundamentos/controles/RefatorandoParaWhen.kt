@@ -1,7 +1,7 @@
 package fundamentos.controles
 
 fun main(args: Array<String>) {
-    val nota = 10
+    val nota = -1
 
     when (nota) {
         10, 9 -> println("Fantástico")
