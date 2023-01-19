@@ -1,6 +1,6 @@
 package funcoes
 
-class Produto(val nome:String, val preco: Double)
+class Produto(val nome: String, val preco: Double)
 
 infix fun Produto.maisCaroQue(produto: Produto): Boolean = (this.preco > produto.preco)
 
