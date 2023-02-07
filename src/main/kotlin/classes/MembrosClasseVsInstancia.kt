@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
     val item1 = ItemDePedido.create("TV 50 Polegadas", 2989.90)
     val item2 = ItemDePedido("Liquidificador", 200.00)
 //    ItemDePedido.desconto = 0.10
-    desconto = 0.0
+    desconto = 0.10
 
     println(item1.precoComDesconto())
     println(item2.precoComDesconto())
