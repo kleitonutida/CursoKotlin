@@ -18,7 +18,7 @@ data class Carro(var marca: String, var modelo: String, var velocidade: Int = 0)
 /*
  * Neste caso o carro continua com a mesma referência e a velocidade é uma variável
  */
-fun porReferencia(carro: Carro){
+fun porReferencia(carro: Carro) {
     carro.velocidade++
 }
 
