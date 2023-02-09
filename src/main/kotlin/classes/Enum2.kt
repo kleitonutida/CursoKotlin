@@ -12,6 +12,6 @@ enum class DiaSemana2(val id: Int, val nome: String, val util: Boolean) {
 
 fun main(args: Array<String>) {
     for (dia in DiaSemana2.values()) {
-        println("${dia.nome} é um dia ${if(dia.util) "útil" else "do fim de semana"}.")
+        println("${dia.nome} é um dia ${if (dia.util) "útil" else "do fim de semana"}.")
     }
 }
