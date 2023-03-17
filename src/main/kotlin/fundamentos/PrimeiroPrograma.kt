@@ -1,6 +1,6 @@
 package fundamentos
 
-fun main(args: Array<String>) {
-    print("Primeiro")
-    println(" programa!")
+fun main() {
+    print("Primeiro") // Exibe uma mensagem em uma linha sem pular a linha
+    println(" programa!") // Exibe uma mensagem em uma linha pulando uma linha logo em seguida
 }
