@@ -19,8 +19,15 @@ fun main(args: Array<String>) {
 
     println(listOf(num1, num2, num3, num4, num5, num6, char, boolean))
 
+    /**
+     * Por padrão, todos os valores inteiros são inicializados como Int, mas se o valor ultrapassar
+     * o que comporta em um inteiro, ele será do tipo Long
+     */
     println(2 is Int)
     println(2147483648 is Long)
+    /**
+     * Por padrão, todos os valores com ponto flutuante são inicializados como Double
+     */
     println(1.0 is Double)
 
     // Tudo é objeto
