@@ -3,7 +3,12 @@ package fundamentos.controles
 fun main(args: Array<String>) {
     val nota: Int = 11
 
-    // Usando operador range
+    /**
+     * Usando operador range em conjunto com o operador in para verificar se um valor está dentro de um
+     * intervalo
+     * Se o valor for, por exemplo, 8.3 ele irá entrar na segunda condição, pois ele irá truncar o valor,
+     * pois a comparação está sendo realizada com um valor inteiro
+     */
     if (nota in 9..10) {
         println("Fantástico")
     } else if (nota in 7..8) {
@@ -19,4 +24,5 @@ fun main(args: Array<String>) {
     // O operador range sempre é do menor para o maior
     println(5 in 7..4)
     println(5 in 4..7)
+    println(5 in 7 downTo 4)
 }
