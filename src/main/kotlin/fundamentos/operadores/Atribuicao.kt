@@ -4,11 +4,35 @@ fun main(args: Array<String>) {
     var a: Int = 7
     var b: Int = 3
 
-    b += a // b = b + a
-    b -= 4 // b = b - 4
-    b *= 2 // b = b * 2
-    b /= 2 // b = b / 2
-    b %= 2 // b = b mod 2
+    /**
+     * Operação de soma de um valor
+     * É o mesmo que b = b + a
+     */
+    b += a
+
+    /**
+     * Operação de subtração de um valor
+     * É o mesmo que b = b - 4
+     */
+    b -= 4
+
+    /**
+     * Operação de multiplicação de um valor
+     * É o mesmo que b = b * 2
+     */
+    b *= 2
+
+    /**
+     * Operação de subtração de um valor
+     * É o mesmo que b = b / 2
+     */
+    b /= 2
+
+    /**
+     * Operação de resto da divisão de um valor
+     * É o mesmo que b = b % 2
+     */
+    b %= 2
 
     println(b)
 }
