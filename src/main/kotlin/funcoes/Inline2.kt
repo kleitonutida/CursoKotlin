@@ -38,5 +38,18 @@ fun main(args: Array<String>) {
 //    val resultado = executarComLog("somar", {
 //        somar2(4, 5)
 //    })
+
+    val resultado2 = executarComLog("somar", {
+        somar2(4, 5)
+    })
+
+    /**
+     * Neste caso não será possível executar a função de somar2, pois não há uma referência válida
+     * para a função
+     */
+    val resultado3 = executarComLog("somar") { ::somar2 }
+
     println(resultado)
+    println(resultado2)
+    println(resultado3)
 }

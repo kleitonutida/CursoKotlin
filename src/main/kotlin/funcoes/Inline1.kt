@@ -59,4 +59,10 @@ fun main(args: Array<String>) {
         println("Executantdo SQL 2...")
         println("Executantdo SQL 3...")
     })
+
+    transacao1(funcao = {
+        println("Executantdo SQL 1...")
+        println("Executantdo SQL 2...")
+        println("Executantdo SQL 3...")
+    }, a = 1)
 }
