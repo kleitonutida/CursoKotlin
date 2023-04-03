@@ -5,11 +5,10 @@ class Filme3(nome: String, anoLancamento: Int, genero: String) {
     val anoLancamento: Int
     val genero: String
 
-    /*
-     * Bloco de inicialização pode ser utilizado para inicializar variáveis mais rebuscadas quanto para realizar
-     * algum cálculo.
-     * Esta funcionalidade também pode ser feita através do construtor
-     * O Bloco init possui acesso às variáveis do construtor
+    /**
+     * O bloco de inicialização pode ser utilizado para inicializar variáveis mais
+     * rebuscadas quanto para realizar algum cálculo.
+     * O bloco init possui acesso às variáveis do construtor
      */
     init {
         this.nome = nome
