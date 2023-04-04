@@ -5,16 +5,17 @@ class Cliente2 {
         this.nome = nome
     }
 
-    /*
-     * Ao redefinir o método get, para acessar a variável corrente, utilize a palavra "field"
+    /**
+     * Ao definir o método get, para acessar o atributo corrente utilizado dentro do get, deve-se
+     * utilizar a palavra "field"
      * O "get" e o "set" podem ser definidos com um bloco de código ou apenas em uma única linha
      *
-     * Os métodos "get" e "set" serão chamados independentemente se ele é informado na invoação do método,
-     * neste caso facilita que eles não precisam ser implementados todas as vezes e sim apenas quando for
-     * necessário ter algo mais customizado
+     * Os métodos "get" e "set" serão chamados independentemente se ele é informado na invoação do
+     * método, neste caso facilita que eles não precisam ser implementados todas as vezes e sim
+     * apenas quando for necessário ter algo customizado
      *
-     * takeIf — Valida se a expressão informada é verdadeira ou falsa, se for verdadeiro será retornado o
-     * valor da variável, caso contrário será retornado nulo
+     * takeIf — Valida se a expressão informada é verdadeira ou falsa, se for verdadeiro será
+     * retornado o valor da variável, caso contrário será retornado nulo
      */
     var nome: String
         get() = "Meu nome é $field"
