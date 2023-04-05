@@ -56,4 +56,10 @@ fun main(args: Array<String>) {
     println(a === b)
     println(a)
     println(b)
+
+    var c = "Bom dia"
+    var d = "Bom dia"
+    println(c === d)
+    d = "Bom dia!"
+    println(c === d)
 }
