@@ -15,20 +15,21 @@ class Calculadora {
         return a + b
     }
 
-    /*
+    /**
      * A função calcular deverá receber como parâmetro dois valores e o tipo de operação
      * O tipo de operação será uma classe que deverá implementar a interface Operação, que
      * obrigará implementar a função executar para o tipo de operação desejado
-     * Por fim, a função executar pode ser invocada para a operação informada
+     * Por fim, a função executar pode ser invocada para a operação informada passando os dois
+     * parâmetros recebidos na entrada
      */
     fun calcular(a: Int, b: Int, operacao: Operacao): Int {
         return operacao.executar(a, b)
     }
 
-    /*
+    /**
      * Função calcular que deverá receber dois valores e a operação
      * A operação é uma função lambda que recebe dois parâmetros e retorna um valor inteiro
-     * No corpo da função será executado a função lambada operação, que será retornada da
+     * No corpo da função será executado a função lambada operação e que será retornada da
      * função calcular. Esta implemtação não ocorre erro, pois, os tipos dos parâmetros da função
      * calcular e da operação são os mesmo, bem como o seu retorno também é do mesmo tipo
      */
