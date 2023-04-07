@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
         .reduce(totalizar)
 
 //    val precoTotal = materialEscolar.map { it.preco }
-//        .reduce( {total, atual -> total + atual })
+//        .reduce { total: Double, atual: Double -> total + atual }
 
     println("O preço médio é ${precoTotal / materialEscolar.size}.")
 }
