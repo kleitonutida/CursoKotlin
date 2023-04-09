@@ -10,6 +10,10 @@ fun main(args: Array<String>) {
     val strings = arrayListOf("Carro", "Moto", "Barco", "Avião")
 
     for (item in strings) {
-        println(item.uppercase()) //
+        /**
+         * Não é necessário realizar o cast, pois ele já irá inferir o tipo da variável facilitando
+         * o uso das funções
+         */
+        println(item.uppercase())
     }
 }
