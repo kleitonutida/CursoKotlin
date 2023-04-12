@@ -11,6 +11,10 @@ fun main(args: Array<String>) {
      */
     var frutas = arrayListOf(Fruta("Banana", 1.50), Fruta("Morango", 3.20))
 
+    /**
+     * Realizado o cast a partir do tipo da variável
+     * Se fosse um array com tipos diferentes, seria uma lista do tipo Any
+     */
     for (fruta in frutas) {
         println("${fruta.nome} - R$ ${fruta.preco}")
     }
