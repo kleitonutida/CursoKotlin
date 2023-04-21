@@ -1,24 +1,24 @@
 package oo.polimorfismo
 
-class Feijao(val peso: Double)
-class Arroz(val peso: Double)
+class Feijao2(val peso: Double)
+class Arroz2(val peso: Double)
 
-class Pessoa(var peso: Double) {
+class Pessoa2(var peso: Double) {
 
-    fun comer(feijao: Feijao) {
+    fun comer(feijao: Feijao2) {
         peso += feijao.peso
     }
 
-    fun comer(arroz: Arroz) {
+    fun comer(arroz: Arroz2) {
         peso += arroz.peso
     }
 }
 
 fun main(args: Array<String>) {
-    val feijao = Feijao(0.3)
-    val arroz = Arroz(0.3)
+    val feijao = Feijao2(0.3)
+    val arroz = Arroz2(0.3)
 
-    val joao = Pessoa(80.5)
+    val joao = Pessoa2(80.5)
     joao.comer(feijao)
     joao.comer(arroz)
 
