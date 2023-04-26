@@ -22,12 +22,21 @@ annotation class Positivo
  */
 annotation class NaoVazio
 
-class Pessoa(id: Int, nome: String) {
+/**
+ * Criação de uma annotation personalizada para validar se uma determinada String não é nula
+ */
+annotation class NaoNulo
+
+class Pessoa(id: Int, nome: String, endereco: String?) {
     @Positivo
     var id: Int = id
 
     @NaoVazio
     var nome: String = nome
+
+    @NaoNulo
+    @NaoVazio
+    var endereco: String? = endereco
 }
 
 /**
@@ -35,7 +44,7 @@ class Pessoa(id: Int, nome: String) {
  * Essa função será genérica e irá receber um objeto e extrair o valor do mesmo por reflexão, mesmo que o atributo
  * seja privado
  */
-fun getValor(objeto: Any, nomeDoAtributo: String): Any {
+fun getValor(objeto: Any, nomeDoAtributo: String): Any? {
     /**
      * Recupera o campo que tem o nome informado
      * Mas, ao recuperar o campo ele pode estar inacessível. Se ele estiver inacessível, não será possível recuperar
@@ -57,7 +66,7 @@ fun getValor(objeto: Any, nomeDoAtributo: String): Any {
      * Recuperando o valor do atributo através do método get, neste caso ele está recuperando o valor do atributo
      * dentro do objeto informado
      */
-    val valor = atributo.get(objeto)
+    val valor: Any? = atributo.get(objeto)
     /**
      * Retornando a acessibilidade ao valor original
      */
@@ -92,6 +101,10 @@ fun validar(objeto: Any): List<String> {
                     if (valor !is Int || valor <= 0) {
                         msgs.add("O valor '$valor' não é um número positivo!")
                     }
+                is NaoNulo ->
+                    if (valor == null) {
+                        msgs.add("O valor '$valor' não é uma string válida!")
+                    }
                 is NaoVazio ->
                     /**
                      * Para a anotação NaoVazio ele vai validar se o campo não é do tipo string e se o valor está em
@@ -107,9 +120,9 @@ fun validar(objeto: Any): List<String> {
 }
 
 fun main(args: Array<String>) {
-    val obj1 = Pessoa(1, "Chico")
+    val obj1 = Pessoa(1, "Chico", "Rua Vergueiro")
     println(validar(obj1))
 
-    val obj2 = Pessoa(-1, "   ")
+    val obj2 = Pessoa(-1, "   ", null)
     println(validar(obj2))
 }
