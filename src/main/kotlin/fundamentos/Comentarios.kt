@@ -1,6 +1,8 @@
 package fundamentos
 
 /**
+ * Comentários em Kotlin são feitos com // ou /* */.
+ *
  * Só para dizer que o kotlin suporta o KDoc... :)
  *
  * Existe uma ferramenta chamada Dokka utilizada para interpretar as documentações feitas em KDoc e
