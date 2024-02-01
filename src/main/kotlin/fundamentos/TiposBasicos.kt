@@ -23,13 +23,14 @@ fun main(args: Array<String>) {
      * Por padrão, todos os valores inteiros são inicializados como Int, mas se o valor ultrapassar
      * o que comporta em um inteiro, ele será do tipo Long
      */
-    println(2 is Int)
-    println(2147483648 is Long)
+    println(2 is Int) // true
+    println(2147483648 is Long) // true
+
     /**
      * Por padrão, todos os valores com ponto flutuante são inicializados como Double
      */
-    println(1.0 is Double)
+    println(1.0 is Double) // true
 
     // Tudo é objeto
-    println(10.dec())
+    println(10.dec()) // 9
 }

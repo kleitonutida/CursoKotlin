@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
      */
     var b = 2
 
-    a = 10
+    a = 10 // Atribuição de valor à variável 'a'
 
     print(a + b)
 }
